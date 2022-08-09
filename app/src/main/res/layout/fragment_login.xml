@@ -48,26 +48,24 @@
 
     <TextView
         android:id="@+id/emailTxtView"
+        style="@style/loginTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginBottom="10dp"
         android:text="@string/prompt_email"
-        android:textSize="@dimen/font_size"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/email"
         app:layout_constraintStart_toStartOf="@+id/passwordTxtView" />
 
     <TextView
         android:id="@+id/passwordTxtView"
+        style="@style/loginTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="12dp"
         android:text="@string/prompt_password"
-        android:textSize="@dimen/font_size"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/password"
         app:layout_constraintEnd_toStartOf="@+id/password"
         app:layout_constraintHorizontal_bias="0.5"
