@@ -17,7 +17,7 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-    <style name="loginTextView">
+    <style name="txtView_Login">
         <item name="android:textSize">@dimen/font_size</item>
         <item name="android:textStyle">bold</item>
     </style>
