@@ -41,8 +41,8 @@ class LoginFragment : Fragment() {
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)
 
-        val usernameEditText = binding.email
-        val passwordEditText = binding.password
+        val usernameEditText = binding.emailEditText
+        val passwordEditText = binding.passwordEditText
         val loginButton = binding.loginBtn
 
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
