@@ -17,4 +17,9 @@
     <string name="viewInstructionsBtm">View Instructions</string>
     <string name="fragment_welcome">Welcome</string>
 
+    <string name="strInstruction1">Click the View Mobile List button to view the mobile phones in the Mobile List screen</string>
+
+    <string name="strInstruction2">Click the Add button in the Mobile List screen to add a new phone to the mobile list</string>
+    <string name="strViewMobileList">View Mobile List</string>
+
 </resources>
