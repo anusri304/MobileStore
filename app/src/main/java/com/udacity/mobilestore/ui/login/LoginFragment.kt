@@ -12,9 +12,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.navigation.findNavController
 import com.udacity.mobilestore.databinding.FragmentLoginBinding
 
 import com.udacity.mobilestore.R
+import com.udacity.mobilestore.WelcomeFragment
 
 class LoginFragment : Fragment() {
 
@@ -44,6 +46,8 @@ class LoginFragment : Fragment() {
         val usernameEditText = binding.emailEditText
         val passwordEditText = binding.passwordEditText
         val loginButton = binding.loginBtn
+        val registerButton = binding.registerBtn
+
 
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
             Observer { loginFormState ->
@@ -51,6 +55,7 @@ class LoginFragment : Fragment() {
                     return@Observer
                 }
                 loginButton.isEnabled = loginFormState.isDataValid
+                registerButton.isEnabled = loginFormState.isDataValid
                 loginFormState.usernameError?.let {
                     usernameEditText.error = getString(it)
                 }
@@ -67,6 +72,7 @@ class LoginFragment : Fragment() {
                 }
                 loginResult.success?.let {
                     updateUiWithUser(it)
+                    view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
                 }
             })
 
@@ -103,6 +109,9 @@ class LoginFragment : Fragment() {
                 usernameEditText.text.toString(),
                 passwordEditText.text.toString()
             )
+        }
+        registerButton.setOnClickListener {
+            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
     }
 
