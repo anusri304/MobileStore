@@ -76,3 +76,9 @@ Open the starter project in Android Studio
     * Observe the Mobiles variable from the ViewModel
     * Use DataBindingUtil to inflate the mobile_list layout
     * Add a new layout item into the scrollview for each mobile.
+
+
+App icon
+Data binding
+https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
+https://stackoverflow.com/questions/54866247/android-assign-livedata-to-listview
