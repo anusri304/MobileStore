@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.mobilestore.databinding.FragmentLoginBinding
 import com.udacity.mobilestore.databinding.FragmentWelcomeBinding
@@ -24,7 +25,7 @@ class WelcomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    lateinit var binding: FragmentWelcomeBinding
+    lateinit var binding:FragmentWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +40,12 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-        binding = FragmentWelcomeBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_welcome,
+            container,
+            false
+        )
         return binding.root
     }
 

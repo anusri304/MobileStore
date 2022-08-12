@@ -7,16 +7,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.udacity.mobilestore.databinding.ActivityMainBinding
 import com.udacity.mobilestore.databinding.FragmentLoginBinding
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration : AppBarConfiguration
-    private var binding: ActivityMainBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        setContentView(R.layout.activity_main)
 
         val navController = this.findNavController(R.id.myNavHostFragment)
         appBarConfiguration = AppBarConfiguration(navController.graph)

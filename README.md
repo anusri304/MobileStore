@@ -61,8 +61,8 @@ Open the starter project in Android Studio
 
     * A new layout
     * A TextView label and EditView for the
-      * Mobile Name
       * Company
+      * Mobile Name
       * Mobile Model
       * Description
     * A Cancel button with an action to navigate back to the Mobile list screen

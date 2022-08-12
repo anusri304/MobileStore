@@ -12,28 +12,38 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
-import androidx.navigation.findNavController
+import androidx.databinding.DataBindingUtil
+
 import com.udacity.mobilestore.databinding.FragmentLoginBinding
 
 import com.udacity.mobilestore.R
-import com.udacity.mobilestore.WelcomeFragment
 
 class LoginFragment : Fragment() {
 
     private lateinit var loginViewModel: LoginViewModel
-    private var _binding: FragmentLoginBinding? = null
+    private lateinit var binding:FragmentLoginBinding
+    private var param1: String? = null
+    private var param2: String? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+//        arguments?.let {
+//            param1 = it.getString(ARG_PARAM1)
+//            param2 = it.getString(ARG_PARAM1)
+//        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_login,
+            container,
+            false
+        )
         return binding.root
 
     }
@@ -72,7 +82,8 @@ class LoginFragment : Fragment() {
                 }
                 loginResult.success?.let {
                     updateUiWithUser(it)
-                    view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+//                    view.findNavController()
+//                        .navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
                 }
             })
 
@@ -111,7 +122,8 @@ class LoginFragment : Fragment() {
             )
         }
         registerButton.setOnClickListener {
-            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+//            view.findNavController()
+//                .navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
     }
 
@@ -129,6 +141,5 @@ class LoginFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
     }
 }
