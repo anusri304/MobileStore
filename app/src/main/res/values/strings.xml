@@ -1,25 +1,24 @@
 <resources>
-    <string name="app_name">MobileStore</string>
+    <string name="app_name">Kalahari Mobile Inventory</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="login">"Login"</string>
+    <string name="login">"Kalahari Mobile Inventory"</string>
     <string name="button_login">Login</string>
     <string name="button_register">Register</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="strWelcomeUser">Welcome to Mobile Store</string>
-    <string name="strWelcomeMsg">To find latest mobile available in the market please click the view instructions button</string>
-    <string name="viewInstructionsBtm">View Instructions</string>
+    <string name="strWelcomeUser">Welcome to Kalahari!</string>
+    <string name="strWelcomeMsg">This App displays latest mobile phones available in the market</string>
+    <string name="takeMeThereBtn">Take Me There</string>
     <string name="fragment_welcome">Welcome</string>
 
-    <string name="strInstruction1">Click the View Mobile List button to view the mobile phones in the Mobile List screen</string>
+    <string name="strInstruction1">Click the button below to view the mobile phones in the Mobile List screen.</string>
 
-    <string name="strInstruction2">Click the Add button in the Mobile List screen to add a new phone to the mobile list</string>
+    <string name="strInstruction2">Click the \'+\' button in the Mobile List screen to add a new phone to the mobile list</string>
     <string name="strViewMobileList">View Mobile List</string>
 
 </resources>

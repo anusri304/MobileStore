@@ -40,7 +40,7 @@
             android:layout_marginStart="126dp"
             android:layout_marginTop="88dp"
             android:layout_marginEnd="126dp"
-            android:text="@string/viewInstructionsBtm"
+            android:text="@string/takeMeThereBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/welcomeMsgTxtView" />
