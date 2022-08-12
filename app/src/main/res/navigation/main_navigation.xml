@@ -29,5 +29,14 @@
         android:id="@+id/instructionFragment"
         android:name="com.udacity.mobilestore.InstructionFragment"
         android:label="Instruction"
-        tools:layout="@layout/fragment_instruction" />
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_mobileFragment"
+            app:destination="@id/mobileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileFragment"
+        android:name="com.udacity.mobilestore.MobileFragment"
+        android:label="@string/mobileList"
+        tools:layout="@layout/fragment_mobile" />
 </navigation>
