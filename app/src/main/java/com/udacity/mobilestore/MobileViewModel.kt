@@ -19,6 +19,5 @@ class MobileViewModel : ViewModel() {
         val mobileList = mutableListOf<Mobile>(samsungA12Mobile,iosMobile)
        // mobiles.value?.let { mobileList.addAll(it) }
         _mobiles.value= mobileList
-        TODO("Not yet implemented")
     }
 }

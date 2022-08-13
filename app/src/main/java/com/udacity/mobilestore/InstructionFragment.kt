@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.mobilestore.R
 import com.udacity.mobilestore.databinding.FragmentInstructionBinding
@@ -40,7 +41,12 @@ class InstructionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentInstructionBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_instruction,
+            container,
+            false
+        )
         return binding.root
     }
 

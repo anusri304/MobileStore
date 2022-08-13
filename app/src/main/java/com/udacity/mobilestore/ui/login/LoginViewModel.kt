@@ -42,11 +42,15 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
     // A placeholder username validation check
     private fun isUserNameValid(username: String): Boolean {
+        //Remove Anandhi
+        var username= "aaa@gmail.com"
         return !TextUtils.isEmpty(username) && android.util.Patterns.EMAIL_ADDRESS.matcher(username).matches();
     }
 
     // A placeholder password validation check
     private fun isPasswordValid(password: String): Boolean {
+        //Remove Anandhi
+        var password= "123456"
         return password.length > 5
     }
 }
