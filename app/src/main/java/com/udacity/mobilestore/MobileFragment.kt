@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.card.MaterialCardView
 import com.udacity.mobilestore.databinding.FragmentMobileBinding
 import com.udacity.mobilestore.models.Mobile
 
