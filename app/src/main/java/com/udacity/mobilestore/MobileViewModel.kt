@@ -14,9 +14,11 @@ class MobileViewModel : ViewModel() {
     }
 
     private fun initMobiles() {
-        var samsungA12Mobile = Mobile("Samsung","Galaxy A12","Android 10","Finger Print (side-mounted) ,accelerometer")
+        var samsungA12Mobile = Mobile("Samsung 123","Galaxy A12","Android 10","Finger Print (side-mounted) ,accelerometer")
         var iosMobile = Mobile("Apple","iPhone 13"," iOS 15","Water resistant,Increased battery life")
-        val mobileList = mutableListOf<Mobile>(samsungA12Mobile,iosMobile)
+        var iosMobile1 = Mobile("Apple 1","iPhone 13"," iOS 15","Water resistant,Increased battery life")
+        var iosMobile2 = Mobile("Apple 2","iPhone 13"," iOS 15","Water resistant,Increased battery life")
+        val mobileList = mutableListOf<Mobile>(samsungA12Mobile,iosMobile,iosMobile1,iosMobile2)
        // mobiles.value?.let { mobileList.addAll(it) }
         _mobiles.value= mobileList
     }
