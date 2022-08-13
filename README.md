@@ -80,5 +80,6 @@ Open the starter project in Android Studio
 
 App icon
 Data binding
+sp or dp check styles
 https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
 https://stackoverflow.com/questions/54866247/android-assign-livedata-to-listview
