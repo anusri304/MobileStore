@@ -2,6 +2,7 @@ package com.udacity.mobilestore
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,21 +57,24 @@ class MobileFragment : Fragment() {
         var cardview: CardView = CardView(requireContext())
         val params: LinearLayout.LayoutParams =
             LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
+                600,
+                150
             )
+        params.setMargins(0, 150, 0, 0);
+        params.gravity = Gravity.CENTER
         cardview.setLayoutParams(params)
         cardview.setRadius(15F);
         cardview.setMaxCardElevation(50F)
        // cardview.setPadding(60, 60, 60, 60);
-        cardview.setCardBackgroundColor(Color.GRAY);
+        cardview.setCardBackgroundColor(Color.LTGRAY);
 
-        params.setMargins(250, 200, 100, 100);
+
         val textCard: TextView = TextView(requireContext())
-        textCard.setTextSize(50F)
-        textCard.setText(mobile.company)
+        textCard.setTextSize(20F)
+        textCard.setText(mobile.company.plus(" ").plus(mobile.model))
         textCard.setTextColor(Color.BLACK)
-        textCard.setLayoutParams(params)
+        textCard.setGravity(Gravity.CENTER)
+       // textCard.setLayoutParams(params)
         cardview.addView(textCard)
         binding.linearLayout.addView(cardview)
     }
