@@ -2,16 +2,16 @@ package com.udacity.mobilestore
 
 import android.graphics.Color
 import android.os.Bundle
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -22,7 +22,7 @@ import com.udacity.mobilestore.models.Mobile
 import kotlinx.android.synthetic.main.fragment_login.*
 
 
-class MobileFragment : Fragment() {
+class MobileFragment : Fragment(), MenuProvider {
     lateinit var binding: FragmentMobileBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -74,6 +74,9 @@ class MobileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val menuHost: MenuHost = requireActivity()
+        menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
+
         binding.floatingActionButton.setOnClickListener {
             view.findNavController()
                 .navigate(MobileFragmentDirections.actionMobileFragmentToMobileDetailFragment())
@@ -81,4 +84,19 @@ class MobileFragment : Fragment() {
 
     }
 
+    override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.menu_mobile_list, menu)
+    }
+    override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+        // Handle the menu selection
+        return when (menuItem.itemId) {
+            R.id.action_logout -> {
+                view?.findNavController()
+                    ?.navigate(MobileFragmentDirections.actionMobileFragmentToLoginFragment())
+                true
+            }
+            else -> false
+        }
+
+    }
 }

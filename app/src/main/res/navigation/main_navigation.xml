@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_mobileFragment_to_mobileDetailFragment"
             app:destination="@id/mobileDetailFragment" />
+        <action
+            android:id="@+id/action_mobileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/mobileDetailFragment"

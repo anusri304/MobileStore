@@ -24,5 +24,6 @@
     <string name="btnCancel">Cancel</string>
     <string name="btnSave">Save</string>
     <string name="strFeature">Feature</string>
+    <string name="logout">Logout</string>
 
 </resources>

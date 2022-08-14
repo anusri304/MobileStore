@@ -70,4 +70,11 @@ class MobileViewModel : ViewModel() {
         _mobiles.value = mobileList
 
     }
+
+    fun resetMobile() {
+        company=""
+        model=""
+        osVersion=""
+        feature=""
+    }
 }

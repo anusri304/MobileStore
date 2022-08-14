@@ -39,8 +39,12 @@ class MobileDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding.mobileViewModel = viewModel
+        viewModel.resetMobile()
         binding.buttonSave.setOnClickListener {
             viewModel.addMobile()
+            view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
+        }
+        binding.buttonCancel.setOnClickListener {
             view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
         }
         return binding.root
