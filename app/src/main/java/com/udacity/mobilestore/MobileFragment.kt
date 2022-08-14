@@ -17,22 +17,27 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.google.android.material.card.MaterialCardView
 import com.udacity.mobilestore.databinding.FragmentMobileBinding
+import com.udacity.mobilestore.databinding.FragmentWelcomeBinding
 import com.udacity.mobilestore.models.Mobile
 import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class MobileFragment : Fragment() {
-    private val binding by lazy {
-        FragmentMobileBinding.inflate(layoutInflater)
-    }
-    private val viewModel: MobileViewModel by activityViewModels()
+    lateinit var binding: FragmentMobileBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_mobile,
+            container,
+            false
+        )
+        val viewModel: MobileViewModel by activityViewModels()
         viewModel.mobiles.observe(viewLifecycleOwner) {
             println(it.get(0))
-            for(mobile in it) {
+            for (mobile in it) {
                 initCardView(mobile)
             }
         }
@@ -52,7 +57,7 @@ class MobileFragment : Fragment() {
         cardview.setLayoutParams(params)
         cardview.setRadius(15F);
         cardview.setMaxCardElevation(50F)
-       // cardview.setPadding(60, 60, 60, 60);
+        // cardview.setPadding(60, 60, 60, 60);
         cardview.setCardBackgroundColor(Color.LTGRAY);
 
 
@@ -61,7 +66,7 @@ class MobileFragment : Fragment() {
         textCard.setText(mobile.company.plus(" ").plus(mobile.model))
         textCard.setTextColor(Color.BLACK)
         textCard.setGravity(Gravity.CENTER)
-       // textCard.setLayoutParams(params)
+        // textCard.setLayoutParams(params)
         cardview.addView(textCard)
         binding.linearLayout.addView(cardview)
     }
@@ -69,8 +74,9 @@ class MobileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.floatingActionButton.setOnClickListener{
-            view.findNavController().navigate(MobileFragmentDirections.actionMobileFragmentToMobileDetailFragment())
+        binding.floatingActionButton.setOnClickListener {
+            view.findNavController()
+                .navigate(MobileFragmentDirections.actionMobileFragmentToMobileDetailFragment())
         }
 
     }
