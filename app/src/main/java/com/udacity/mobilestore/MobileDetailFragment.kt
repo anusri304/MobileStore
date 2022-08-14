@@ -40,7 +40,7 @@ class MobileDetailFragment : Fragment() {
     ): View? {
         binding.mobileViewModel = viewModel
         binding.buttonSave.setOnClickListener {
-            viewModel.addUserMobile()
+            viewModel.addMobile()
             view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
         }
         return binding.root
