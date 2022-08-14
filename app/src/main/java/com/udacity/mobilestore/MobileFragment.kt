@@ -11,45 +11,31 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.google.android.material.card.MaterialCardView
 import com.udacity.mobilestore.databinding.FragmentMobileBinding
 import com.udacity.mobilestore.models.Mobile
+import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class MobileFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = MobileFragment()
+    private val binding by lazy {
+        FragmentMobileBinding.inflate(layoutInflater)
     }
-
-    private lateinit var viewModel: MobileViewModel
-
-    lateinit var binding: FragmentMobileBinding
-
+    private val viewModel: MobileViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_mobile,
-            container,
-            false
-        )
-        viewModel = ViewModelProvider(this).get(MobileViewModel::class.java)
-        // Specify the current activity as the lifecycle owner of the binding. This is used so that
-        // the binding can observe LiveData updates
-        binding.setLifecycleOwner(this)
-
-
-        viewModel.mobiles.observe(viewLifecycleOwner, Observer { mobileList ->
-            println(mobileList.get(0))
-            for(mobile in mobileList) {
+        viewModel.mobiles.observe(viewLifecycleOwner) {
+            println(it.get(0))
+            for(mobile in it) {
                 initCardView(mobile)
             }
-        })
+        }
         return binding.root
     }
 
@@ -82,6 +68,10 @@ class MobileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.floatingActionButton.setOnClickListener{
+            view.findNavController().navigate(MobileFragmentDirections.actionMobileFragmentToMobileDetailFragment())
+        }
 
     }
 

@@ -38,5 +38,17 @@
         android:id="@+id/mobileFragment"
         android:name="com.udacity.mobilestore.MobileFragment"
         android:label="@string/mobileList"
-        tools:layout="@layout/fragment_mobile" />
+        tools:layout="@layout/fragment_mobile" >
+        <action
+            android:id="@+id/action_mobileFragment_to_mobileDetailFragment"
+            app:destination="@id/mobileDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileDetailFragment"
+        android:name="com.udacity.mobilestore.MobileDetailFragment"
+        android:label="MobileDetailFragment" >
+        <action
+            android:id="@+id/action_mobileDetailFragment_to_mobileFragment"
+            app:destination="@id/mobileFragment" />
+    </fragment>
 </navigation>

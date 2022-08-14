@@ -22,6 +22,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="txtView_Mobile_Detail">
+        <item name="android:textSize">@dimen/font_size_login</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="txtView_Welcome">
         <item name="android:textSize">@dimen/font_size_welcome</item>
         <item name="android:fontFamily">sans-serif-black</item>
