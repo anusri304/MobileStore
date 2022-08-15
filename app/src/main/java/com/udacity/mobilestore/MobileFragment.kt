@@ -6,6 +6,7 @@ import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.databinding.DataBindingUtil
@@ -56,7 +57,7 @@ class MobileFragment : Fragment(), MenuProvider {
         cardview.setLayoutParams(params)
         cardview.setRadius(15F);
         cardview.setMaxCardElevation(50F)
-        cardview.setCardBackgroundColor(Color.LTGRAY);
+        cardview.setCardBackgroundColor(ContextCompat.getColor(requireActivity(), R.color.colorPrimary));
 
 
         val textCard: TextView = TextView(requireContext())
