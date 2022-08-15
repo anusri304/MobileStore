@@ -25,5 +25,6 @@
     <string name="btnSave">Save</string>
     <string name="strFeature">Feature</string>
     <string name="logout">Logout</string>
+    <string name="validation_mobile_detail_message">Please enter all the fields</string>
 
 </resources>

@@ -36,7 +36,6 @@ class MobileFragment : Fragment(), MenuProvider {
         )
         val viewModel: MobileViewModel by activityViewModels()
         viewModel.mobiles.observe(viewLifecycleOwner) {
-            println(it.get(0))
             for (mobile in it) {
                 initCardView(mobile)
             }
@@ -74,6 +73,7 @@ class MobileFragment : Fragment(), MenuProvider {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Add Menu options
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 

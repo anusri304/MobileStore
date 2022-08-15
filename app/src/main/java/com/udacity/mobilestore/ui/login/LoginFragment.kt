@@ -121,7 +121,7 @@ class LoginFragment : Fragment() {
         val welcome = getString(R.string.strWelcomeUser) + model.displayName
         // TODO : initiate successful logged in experience
         val appContext = context?.applicationContext ?: return
-        Toast.makeText(appContext, welcome, Toast.LENGTH_LONG).show()
+        Toast.makeText(appContext, welcome, Toast.LENGTH_SHORT).show()
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {

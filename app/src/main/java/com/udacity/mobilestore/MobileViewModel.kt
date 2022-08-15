@@ -77,4 +77,8 @@ class MobileViewModel : ViewModel() {
         osVersion=""
         feature=""
     }
+
+    fun validate():Boolean{
+        return ! company.equals("")&& !model.equals("")&& !osVersion.equals("")&& !feature.equals("")
+    }
 }

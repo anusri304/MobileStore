@@ -10,13 +10,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.udacity.mobilestore.databinding.FragmentMobileBinding
 import com.udacity.mobilestore.databinding.FragmentMobileDetailBinding
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -34,6 +30,8 @@ class MobileDetailFragment : Fragment() {
 
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,8 +39,18 @@ class MobileDetailFragment : Fragment() {
         binding.mobileViewModel = viewModel
         viewModel.resetMobile()
         binding.buttonSave.setOnClickListener {
-            viewModel.addMobile()
-            view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
+            if(viewModel.validate()) {
+                viewModel.addMobile()
+                view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
+            }
+            else {
+                Snackbar.make(
+                    requireView(),
+                    getString(R.string.validation_mobile_detail_message),
+                    Snackbar.LENGTH_LONG)
+                    .show()
+            }
+
         }
         binding.buttonCancel.setOnClickListener {
             view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
@@ -53,23 +61,5 @@ class MobileDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
     }
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MobileDetailFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MobileDetailFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }
