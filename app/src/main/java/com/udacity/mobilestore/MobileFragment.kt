@@ -56,7 +56,6 @@ class MobileFragment : Fragment(), MenuProvider {
         cardview.setLayoutParams(params)
         cardview.setRadius(15F);
         cardview.setMaxCardElevation(50F)
-        // cardview.setPadding(60, 60, 60, 60);
         cardview.setCardBackgroundColor(Color.LTGRAY);
 
 
