@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/mobileFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -23,7 +23,9 @@
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
-            app:destination="@id/instructionFragment" />
+            app:destination="@id/instructionFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
@@ -32,7 +34,9 @@
         tools:layout="@layout/fragment_instruction" >
         <action
             android:id="@+id/action_instructionFragment_to_mobileFragment"
-            app:destination="@id/mobileFragment" />
+            app:destination="@id/mobileFragment"
+            app:popUpTo="@id/instructionFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/mobileFragment"
@@ -41,7 +45,8 @@
         tools:layout="@layout/fragment_mobile" >
         <action
             android:id="@+id/action_mobileFragment_to_mobileDetailFragment"
-            app:destination="@id/mobileDetailFragment" />
+            app:destination="@id/mobileDetailFragment"
+          />
         <action
             android:id="@+id/action_mobileFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -52,6 +57,9 @@
         android:label="MobileDetailFragment" >
         <action
             android:id="@+id/action_mobileDetailFragment_to_mobileFragment"
-            app:destination="@id/mobileFragment" />
+            app:destination="@id/mobileFragment"
+            app:popUpTo="@id/mobileFragment"
+            app:popUpToInclusive="true"
+           />
     </fragment>
 </navigation>
