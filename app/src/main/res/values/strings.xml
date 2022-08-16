@@ -18,7 +18,7 @@
 
     <string name="strInstruction1">Click the button below to view the mobile phones in the Mobile List screen.</string>
 
-    <string name="strInstruction2">Click the \'+\' button in the Mobile List screen to add a new phone to the mobile list</string>
+    <string name="strInstruction2">Click the \'+\' button in the Mobile List screen to add a new phone to the mobile list.</string>
     <string name="strViewMobileList">View Mobile List</string>
     <string name="strMobileList">Mobile List</string>
     <string name="btnCancel">Cancel</string>

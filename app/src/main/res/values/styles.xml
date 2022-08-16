@@ -31,5 +31,24 @@
         <item name="android:textSize">@dimen/font_size_welcome</item>
         <item name="android:fontFamily">sans-serif-black</item>
     </style>
+
+    <style name="buttonStyle">
+        <item name="android:backgroundTint">#009688</item>
+        <item name="android:width">150dp</item>
+    </style>
+
+    <style name="fontRobotoStyle">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="welcomeMsgTitleStyle" parent="fontRobotoStyle" >
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="msgStyle" parent="fontRobotoStyle">
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>
 
