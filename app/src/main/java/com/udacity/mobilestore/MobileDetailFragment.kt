@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -16,27 +17,29 @@ import com.udacity.mobilestore.databinding.FragmentMobileDetailBinding
  * create an instance of this fragment.
  */
 class MobileDetailFragment : Fragment() {
-    private val binding by lazy {
-        FragmentMobileDetailBinding.inflate(layoutInflater)
-    }
-    private val viewModel: MobileViewModel by activityViewModels()
+    lateinit var binding: FragmentMobileDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding.mobileViewModel = viewModel
-        viewModel.resetMobile()
+
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_mobile_detail,
+            container,
+            false
+        )
+        val mobileviewModel: MobileViewModel by activityViewModels()
+        binding.mobileViewModel = mobileviewModel
+        mobileviewModel.resetMobile()
         binding.buttonSave.setOnClickListener {
-            if(viewModel.validate()) {
-                viewModel.addMobile()
+            if(mobileviewModel.validate()) {
+                mobileviewModel.addMobile()
                 view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
             }
             else {
