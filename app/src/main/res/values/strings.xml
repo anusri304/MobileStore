@@ -28,5 +28,9 @@
     <string name="validation_mobile_detail_message">Please enter all the fields</string>
     <string name="mobileDetail">Mobile Detail</string>
     <string name="strInstructionTitle">Instruction</string>
+    <string name="strCompany">Company</string>
+    <string name="strModel">Model</string>
+    <string name="strOSVersion">OS Version</string>
+    <string name="strAddMobile">Add Mobile</string>
 
 </resources>
