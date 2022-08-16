@@ -1,4 +1,4 @@
-package com.udacity.mobilestore.ui.login
+package com.udacity.mobilestore.viewmodel
 
 import android.text.TextUtils
 import androidx.lifecycle.LiveData
@@ -7,6 +7,9 @@ import androidx.lifecycle.ViewModel
 import com.udacity.mobilestore.R
 import com.udacity.mobilestore.data.LoginRepository
 import com.udacity.mobilestore.data.Result
+import com.udacity.mobilestore.ui.LoggedInUserView
+import com.udacity.mobilestore.models.LoginFormState
+import com.udacity.mobilestore.models.LoginResult
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
@@ -41,14 +44,12 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     // A placeholder username validation check
     private fun isUserNameValid(username: String): Boolean {
         //Remove Anandhi
-        var username= "aaa@gmail.com"
         return !TextUtils.isEmpty(username) && android.util.Patterns.EMAIL_ADDRESS.matcher(username).matches();
     }
 
     // A placeholder password validation check
     private fun isPasswordValid(password: String): Boolean {
         //Remove Anandhi
-        var password= "123456"
         return password.length > 5
     }
 }

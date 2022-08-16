@@ -1,4 +1,4 @@
-package com.udacity.mobilestore.ui.login
+package com.udacity.mobilestore.ui
 
 /**
  * User details post authentication that is exposed to the UI

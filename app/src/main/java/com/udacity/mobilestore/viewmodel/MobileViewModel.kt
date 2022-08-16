@@ -1,4 +1,4 @@
-package com.udacity.mobilestore
+package com.udacity.mobilestore.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

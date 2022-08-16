@@ -1,4 +1,4 @@
-package com.udacity.mobilestore.ui.login
+package com.udacity.mobilestore.models
 
 /**
  * Data validation state of the login form.

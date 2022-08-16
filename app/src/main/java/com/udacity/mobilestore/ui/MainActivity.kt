@@ -1,4 +1,4 @@
-package com.udacity.mobilestore
+package com.udacity.mobilestore.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.udacity.mobilestore.R
 import com.udacity.mobilestore.databinding.ActivityMainBinding
 import timber.log.Timber
 

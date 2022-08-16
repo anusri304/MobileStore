@@ -1,4 +1,4 @@
-package com.udacity.mobilestore
+package com.udacity.mobilestore.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,16 +7,17 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.udacity.mobilestore.databinding.FragmentWelcomeBinding
+import com.udacity.mobilestore.R
+import com.udacity.mobilestore.databinding.FragmentInstructionBinding
+
 
 /**
  * A simple [Fragment] subclass.
- * Use the [WelcomeFragment.newInstance] factory method to
+ * Use the [InstructionFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class WelcomeFragment : Fragment() {
-
-    lateinit var binding: FragmentWelcomeBinding
+class InstructionFragment : Fragment() {
+    lateinit var binding: FragmentInstructionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +28,9 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_welcome,
+            R.layout.fragment_instruction,
             container,
             false
         )
@@ -40,9 +40,8 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.instructionsBtn.setOnClickListener {
-            view.findNavController()
-                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
+        binding.viewMobileListBtn.setOnClickListener {
+            view.findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToMobileFragment())
         }
     }
 }

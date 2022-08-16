@@ -1,4 +1,4 @@
-package com.udacity.mobilestore.ui.login
+package com.udacity.mobilestore.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

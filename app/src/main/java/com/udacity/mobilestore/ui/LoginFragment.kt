@@ -1,4 +1,4 @@
-package com.udacity.mobilestore.ui.login
+package com.udacity.mobilestore.ui
 
 import android.os.Bundle
 import android.text.Editable
@@ -16,6 +16,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.mobilestore.R
 import com.udacity.mobilestore.databinding.FragmentLoginBinding
+import com.udacity.mobilestore.viewmodel.LoginViewModel
+import com.udacity.mobilestore.viewmodel.LoginViewModelFactory
 
 class LoginFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.udacity.mobilestore
+package com.udacity.mobilestore.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
+import com.udacity.mobilestore.R
 import com.udacity.mobilestore.databinding.FragmentMobileDetailBinding
+import com.udacity.mobilestore.viewmodel.MobileViewModel
 
 /**
  * A simple [Fragment] subclass.

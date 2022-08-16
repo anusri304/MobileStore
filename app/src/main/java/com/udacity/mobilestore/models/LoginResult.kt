@@ -1,4 +1,6 @@
-package com.udacity.mobilestore.ui.login
+package com.udacity.mobilestore.models
+
+import com.udacity.mobilestore.ui.LoggedInUserView
 
 /**
  * Authentication result : success (user details) or error message.

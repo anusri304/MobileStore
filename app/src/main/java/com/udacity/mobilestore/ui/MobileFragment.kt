@@ -1,4 +1,4 @@
-package com.udacity.mobilestore
+package com.udacity.mobilestore.ui
 
 import android.graphics.Color
 import android.os.Bundle
@@ -14,8 +14,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
+import com.udacity.mobilestore.R
 import com.udacity.mobilestore.databinding.FragmentMobileBinding
 import com.udacity.mobilestore.models.Mobile
+import com.udacity.mobilestore.viewmodel.MobileViewModel
 
 
 class MobileFragment : Fragment(), MenuProvider {
@@ -53,7 +55,9 @@ class MobileFragment : Fragment(), MenuProvider {
         cardview.setLayoutParams(params)
         cardview.setRadius(15F);
         cardview.setMaxCardElevation(50F)
-        cardview.setCardBackgroundColor(ContextCompat.getColor(requireActivity(), R.color.colorPrimary));
+        cardview.setCardBackgroundColor(ContextCompat.getColor(requireActivity(),
+            R.color.colorPrimary
+        ));
 
 
         val textCard: TextView = TextView(requireContext())
