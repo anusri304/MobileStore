@@ -78,8 +78,6 @@ Open the starter project in Android Studio
     * Add a new layout item into the scrollview for each mobile.
 
 
-App icon
-Data binding
-sp or dp check styles
+
 test navigation (back/up)
 
