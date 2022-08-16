@@ -1,9 +1,5 @@
 package com.udacity.mobilestore.ui.login
 
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.annotation.StringRes
-import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -12,12 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.udacity.mobilestore.databinding.FragmentLoginBinding
-
 import com.udacity.mobilestore.R
-import com.udacity.mobilestore.WelcomeFragment
+import com.udacity.mobilestore.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 

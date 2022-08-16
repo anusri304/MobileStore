@@ -4,11 +4,9 @@ import android.text.TextUtils
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.util.Patterns
+import com.udacity.mobilestore.R
 import com.udacity.mobilestore.data.LoginRepository
 import com.udacity.mobilestore.data.Result
-
-import com.udacity.mobilestore.R
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 

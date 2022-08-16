@@ -1,7 +1,7 @@
 package com.udacity.mobilestore
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -9,7 +9,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.udacity.mobilestore.databinding.ActivityMainBinding
-import com.udacity.mobilestore.databinding.FragmentLoginBinding
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {

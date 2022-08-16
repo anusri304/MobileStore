@@ -13,14 +13,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.google.android.material.card.MaterialCardView
 import com.udacity.mobilestore.databinding.FragmentMobileBinding
-import com.udacity.mobilestore.databinding.FragmentWelcomeBinding
 import com.udacity.mobilestore.models.Mobile
-import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class MobileFragment : Fragment(), MenuProvider {
@@ -36,6 +31,7 @@ class MobileFragment : Fragment(), MenuProvider {
             false
         )
         val viewModel: MobileViewModel by activityViewModels()
+        //Observe mobiles LiveData to add a new card view to the UI
         viewModel.mobiles.observe(viewLifecycleOwner) {
             for (mobile in it) {
                 initCardView(mobile)

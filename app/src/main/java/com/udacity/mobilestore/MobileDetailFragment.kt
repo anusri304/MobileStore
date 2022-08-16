@@ -1,17 +1,13 @@
 package com.udacity.mobilestore
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
-import com.udacity.mobilestore.databinding.FragmentMobileBinding
 import com.udacity.mobilestore.databinding.FragmentMobileDetailBinding
 
 /**
