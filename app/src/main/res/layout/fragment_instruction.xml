@@ -13,6 +13,7 @@
 
         <TextView
             android:id="@+id/instruction1TxtView"
+            style="@style/fontRobotoStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
