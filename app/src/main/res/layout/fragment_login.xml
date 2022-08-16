@@ -74,11 +74,10 @@
 
         <Button
             android:id="@+id/loginBtn"
+            style="@style/buttonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
-            android:width="150dp"
-            android:backgroundTint="#009688"
             android:enabled="false"
             android:text="@string/button_login"
             android:textColor="#000000"
@@ -88,11 +87,10 @@
 
         <Button
             android:id="@+id/registerBtn"
+            style="@style/buttonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:width="150dp"
-            android:backgroundTint="#009688"
             android:enabled="false"
             android:text="@string/button_register"
             android:textColor="#000000"
