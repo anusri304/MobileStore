@@ -82,6 +82,4 @@ App icon
 Data binding
 sp or dp check styles
 test navigation (back/up)
-strings.xml (no hardcoded string)
-finalize on the string name and styles
-set custom style in style.xml
+
