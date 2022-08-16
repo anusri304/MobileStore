@@ -17,8 +17,7 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true" />
+           />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -42,11 +41,11 @@
         <action
             android:id="@+id/action_instructionFragment_to_mobileFragment"
             app:destination="@id/mobileFragment"
-            app:popUpTo="@id/welcomeFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/welcomeFragment"
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
@@ -65,11 +64,11 @@
         <action
             android:id="@+id/action_mobileFragment_to_loginFragment"
             app:destination="@id/loginFragment"
-            app:popUpTo="@id/mobileFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/mobileFragment"
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
@@ -79,11 +78,11 @@
         <action
             android:id="@+id/action_mobileDetailFragment_to_mobileFragment"
             app:destination="@id/mobileFragment"
-            app:popUpTo="@id/mobileFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/mobileFragment"
             app:popUpToInclusive="true"
            />
     </fragment>
