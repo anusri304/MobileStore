@@ -75,15 +75,5 @@
         android:id="@+id/mobileDetailFragment"
         android:name="com.udacity.mobilestore.ui.MobileDetailFragment"
         android:label="@string/mobileDetail" >
-        <action
-            android:id="@+id/action_mobileDetailFragment_to_mobileFragment"
-            app:destination="@id/mobileFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@id/mobileFragment"
-            app:popUpToInclusive="true"
-           />
     </fragment>
 </navigation>

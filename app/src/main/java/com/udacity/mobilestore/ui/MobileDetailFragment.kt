@@ -42,7 +42,7 @@ class MobileDetailFragment : Fragment() {
         binding.buttonSave.setOnClickListener {
             if(mobileviewModel.validate()) {
                 mobileviewModel.addMobile()
-                view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
+                view?.findNavController()?.navigateUp()
             }
             else {
                 Snackbar.make(
@@ -54,7 +54,8 @@ class MobileDetailFragment : Fragment() {
 
         }
         binding.buttonCancel.setOnClickListener {
-            view?.findNavController()?.navigate(MobileDetailFragmentDirections.actionMobileDetailFragmentToMobileFragment())
+            // To navigate to previpus fragment
+            view?.findNavController()?.navigateUp()
         }
         return binding.root
     }
