@@ -52,19 +52,28 @@ class MobileFragment : Fragment(), MenuProvider {
             )
         params.setMargins(0, 150, 0, 0);
         params.gravity = Gravity.CENTER
-        cardview.setLayoutParams(params)
-        cardview.setRadius(15F);
-        cardview.setMaxCardElevation(50F)
-        cardview.setCardBackgroundColor(ContextCompat.getColor(requireActivity(),
-            R.color.colorPrimary
-        ));
+
+        with(cardview) {
+            layoutParams = params
+            radius = 15F
+            maxCardElevation = 50F
+            setCardBackgroundColor(
+                ContextCompat.getColor(
+                    requireActivity(),
+                    R.color.colorPrimary
+                )
+            )
+        }
 
 
         val textCard: TextView = TextView(requireContext())
-        textCard.setTextSize(20F)
-        textCard.setText(mobile.company.plus(" ").plus(mobile.model))
-        textCard.setTextColor(Color.BLACK)
-        textCard.setGravity(Gravity.CENTER)
+        with(textCard) {
+            textSize = 20F
+            text = mobile.company.plus(" ").plus(mobile.model)
+            setTextColor(Color.BLACK)
+            gravity = Gravity.CENTER
+
+        }
         // textCard.setLayoutParams(params)
         cardview.addView(textCard)
         binding.linearLayout.addView(cardview)
@@ -87,6 +96,7 @@ class MobileFragment : Fragment(), MenuProvider {
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
         menuInflater.inflate(R.menu.menu_mobile_list, menu)
     }
+
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         // Handle the menu selection
         return when (menuItem.itemId) {
