@@ -2,7 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- Linear layout caters for simple UI and gives a clear understanding of the relationship between
+      children views. It arranges views either horizontally or vertically is also easier to change the position of the elements. -->
     <LinearLayout
         android:id="@+id/parentLinearLayout"
         android:layout_width="match_parent"
@@ -34,7 +35,5 @@
             app:backgroundTint="#009688"
             app:srcCompat="@drawable/ic_add"
              />
-
-
     </LinearLayout>
 </layout>

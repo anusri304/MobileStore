@@ -7,6 +7,7 @@
             name="mobileViewModel"
             type="com.udacity.mobilestore.viewmodel.MobileViewModel" />
     </data>
+    <!-- Constraint layout caters for responsive UI and complex layouts in future  -->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
